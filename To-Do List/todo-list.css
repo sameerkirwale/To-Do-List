@@ -1,0 +1,52 @@
+h1 {
+    font-weight: lighter;
+    font-size: 24px;
+}
+
+section.todo-grid {
+    display: grid;
+    grid-template-columns: 200px 150px 100px;
+    margin-top: 10px;
+}
+
+input.css-input {
+    margin-right: 10px;
+    padding: 10px 6px;
+}
+
+button.css-btn {
+    color: white;
+    border: 0px solid;
+    border-radius: 2px;
+}
+
+button#css-add-btn {
+    background-color: rgb(15, 224, 15);
+    padding: 12px 38px;
+}
+
+button#css-add-btn:hover {
+    background-color: rgb(15, 224, 15, 0.8);
+}
+
+button#css-add-btn:active {
+    background-color: rgb(15, 224, 15, 0.5);
+    color: gray;
+}
+
+button#css-delete-btn {
+    background-color: rgb(255, 0, 0);
+    padding: 12px 30.5px;
+    margin-bottom: 10px;
+}
+
+button#css-delete-btn:hover {
+    background-color:  rgb(255, 0, 0, 0.7);
+}
+
+div.display-todo {
+    margin: 0px 10px 10px 0px;
+    padding: 10px 6px;
+    border: 1px solid rgb(0, 191, 255);
+    border-radius: 2px;
+}
