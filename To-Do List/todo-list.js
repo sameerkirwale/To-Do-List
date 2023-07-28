@@ -12,6 +12,10 @@ const deleteButton =(i)=> {
     return (`<button id="css-delete-btn" class="css-btn" onclick="deleteTodo(${i})"> Delete </button>`);
 } 
 
+// EVENT LISTENER WHEN ADD BTN IS CLICKED
+const addBtnEle = document.querySelector ('.js-add-btn');
+addBtnEle.addEventListener ( 'click', addTodo );
+
 const todoDateElement = document.querySelector ('.js-todo-date'); // INPUT DATE
 const todoNameElement = document.querySelector ('.js-todo-name'); // INPUT NAME 
 
@@ -38,40 +42,38 @@ const renderTodoList =()=> {
 renderTodoList();
 
 // FUNCTION TO ADD A TO-DO ITEM IN LIST
-let addTodo =()=> {
+function addTodo() {
 
-    if ( ( todoNameElement.value === null && todoDateElement.value !== null ) || ( todoNameElement.value === '' ) ) {
-        alert ( 'Enter a valid To-Do name' );
-        console.log ( todoNameElement.value )
-        console.log (todoDateElement.value)
+    if ((todoNameElement.value === null && todoDateElement.value !== null) || (todoNameElement.value === '')) {
+        alert('Enter a valid To-Do name');
     }
 
-    else if ( todoNameElement.value !== '' && todoDateElement.value === '' ) {
-        todoName.push ( todoNameElement.value );
-        todoDate.push ( 'No Date Selected' );
+    else if (todoNameElement.value !== '' && todoDateElement.value === '') {
+        todoName.push(todoNameElement.value);
+        todoDate.push('No Date Selected');
     }
 
     else {
-        todoName.push ( todoNameElement.value );
-        todoDate.push ( todoDateElement.value );
+        todoName.push(todoNameElement.value);
+        todoDate.push(todoDateElement.value);
     };
 
     // SET TO-DO LIST IN LOCALSTORAGE
-    localStorage.setItem ('todoName', JSON.stringify(todoName)); 
+    localStorage.setItem('todoName', JSON.stringify(todoName));
 
     // SET TO-DO DATE IN LOCALSTORAGE
-    localStorage.setItem ('todoDate', JSON.stringify(todoDate));
+    localStorage.setItem('todoDate', JSON.stringify(todoDate));
 
     renderTodoList();
 }
 
-let deleteTodo =(i)=> {
+function deleteTodo(i) {
 
-    todoName.splice ( `${i}`, 1 );
-    localStorage.setItem ('todoName', JSON.stringify(todoName)); 
+    todoName.splice(`${i}`, 1);
+    localStorage.setItem('todoName', JSON.stringify(todoName));
 
-    todoDate.splice ( `${i}`, 1 );
-    localStorage.setItem ('todoDate', JSON.stringify(todoDate));
+    todoDate.splice(`${i}`, 1);
+    localStorage.setItem('todoDate', JSON.stringify(todoDate));
 
     renderTodoList();
 }
