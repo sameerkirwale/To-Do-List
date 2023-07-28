@@ -69,10 +69,10 @@ function addTodo() {
 
 function deleteTodo(i) {
 
-    todoName.splice(`${i}`, 1);
+    todoName.splice( i, 1);
     localStorage.setItem('todoName', JSON.stringify(todoName));
 
-    todoDate.splice(`${i}`, 1);
+    todoDate.splice( i, 1);
     localStorage.setItem('todoDate', JSON.stringify(todoDate));
 
     renderTodoList();
