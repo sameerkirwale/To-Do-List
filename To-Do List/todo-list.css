@@ -5,7 +5,7 @@ h1 {
 
 section.todo-grid {
     display: grid;
-    grid-template-columns: 200px 150px 100px;
+    grid-template-columns: 200px 150px 110px 50px;
     margin-top: 10px;
 }
 
@@ -23,6 +23,7 @@ button.css-btn {
 button#css-add-btn {
     background-color: rgb(15, 224, 15);
     padding: 12px 38px;
+    width: 100px;
 }
 
 button#css-add-btn:hover {
@@ -38,6 +39,7 @@ button#css-delete-btn {
     background-color: rgb(255, 0, 0);
     padding: 12px 30.5px;
     margin-bottom: 10px;
+    margin-right: 10px;
 }
 
 button#css-delete-btn:hover {
