@@ -30,7 +30,10 @@ const renderTodoList =()=> {
 
         html += `<div class='display-todo'> ${name} </div> 
                     <div class='display-todo'> ${date} </div> 
-                    ${deleteButton(i)}`;
+                    ${deleteButton(i)}
+                    <div class='display-todo'> 
+                        <input type="checkbox" id="${i}"> 
+                    </div>`;
     }
 
     showTodoListElement.innerHTML = `${html}` ;
